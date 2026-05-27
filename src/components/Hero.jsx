@@ -116,82 +116,50 @@ export default function Hero() {
           {/* Stats cards */}
           <motion.div {...fu(1.3)}
             style={{
-              display: 'flex', alignItems: 'stretch', gap: '1rem', marginTop: '2.5rem',
-              flexWrap: 'wrap', justifyContent: 'center'
+              display: 'flex', alignItems: 'stretch', gap: '1px', marginTop: '2.5rem',
+              flexWrap: 'wrap', justifyContent: 'center',
+              border: '1px solid rgba(255,255,255,0.1)',
+              borderRadius: '1.5rem', overflow: 'hidden',
+              backdropFilter: 'blur(24px)',
+              background: 'rgba(0,0,0,0.6)',
             }}>
 
             {[{
-              icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
-                  fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.5"
-                  strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="8" r="6" />
-                  <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
-                </svg>
-              ),
               value: '81%',
               label: 'NPTEL AI Score',
               sublabel: 'IISc Bangalore',
             }, {
-              icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
-                  fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.5"
-                  strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="7" width="20" height="14" rx="2" />
-                  <path d="M16 7V5a2 2 0 0 0-4 0v2M8 7V5a2 2 0 0 0-4 0v2" />
-                </svg>
-              ),
               value: '3×',
               label: 'Internships',
               sublabel: 'Production Experience',
             }, {
-              icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
-                  fill="none" stroke="rgba(255,255,255,0.9)" strokeWidth="1.5"
-                  strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-                </svg>
-              ),
               value: '2×',
               label: 'Cloud Certified',
               sublabel: 'AWS & IBM',
-            }].map((card, i) => (
+            }].map((card, i, arr) => (
               <div key={i}
-                className="liquid-glass"
                 style={{
-                  width: 200, borderRadius: '1.5rem', padding: '1.5rem 1.25rem',
-                  display: 'flex', flexDirection: 'column', gap: '1.25rem',
-                  backgroundColor: 'rgba(255,255,255,0.07)',
-                  backdropFilter: 'blur(20px)',
-                  transition: 'transform 0.25s ease, box-shadow 0.25s ease',
+                  flex: '1 1 160px', padding: '1.5rem 1.75rem',
+                  display: 'flex', flexDirection: 'column', gap: '0.35rem',
+                  borderRight: i < arr.length - 1 ? '1px solid rgba(255,255,255,0.08)' : 'none',
+                  transition: 'background 0.2s ease',
                   cursor: 'default',
                 }}
-                onMouseEnter={e => {
-                  e.currentTarget.style.transform = 'translateY(-4px)';
-                  e.currentTarget.style.boxShadow = '0 16px 40px rgba(255,255,255,0.08)';
-                }}
-                onMouseLeave={e => {
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}>
-                <div style={{ filter: 'drop-shadow(0 2px 8px rgba(0,0,0,0.6))' }}>{card.icon}</div>
-                <div>
-                  <div style={{
-                    fontFamily: "'Instrument Serif', serif", fontStyle: 'italic',
-                    fontSize: '2.75rem', letterSpacing: '-2px', lineHeight: 1,
-                    color: '#fff', textShadow: '0 2px 12px rgba(0,0,0,0.5)'
-                  }}>{card.value}</div>
-                  <div style={{
-                    fontSize: '0.875rem', color: 'rgba(255,255,255,0.95)',
-                    fontFamily: 'Barlow, sans-serif', fontWeight: 600, marginTop: '0.35rem',
-                    textShadow: '0 1px 8px rgba(0,0,0,0.6)'
-                  }}>{card.label}</div>
-                  <div style={{
-                    fontSize: '0.75rem', color: 'rgba(255,255,255,0.6)',
-                    fontFamily: 'Barlow, sans-serif', fontWeight: 300, marginTop: '0.15rem',
-                    textShadow: '0 1px 6px rgba(0,0,0,0.5)'
-                  }}>{card.sublabel}</div>
-                </div>
+                onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.04)'; }}
+                onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; }}>
+                <div style={{
+                  fontFamily: "'Instrument Serif', serif", fontStyle: 'italic',
+                  fontSize: '2.5rem', letterSpacing: '-2px', lineHeight: 1, color: '#fff',
+                }}>{card.value}</div>
+                <div style={{
+                  fontSize: '0.8125rem', color: 'rgba(255,255,255,0.85)',
+                  fontFamily: 'Barlow, sans-serif', fontWeight: 500, marginTop: '0.25rem',
+                }}>{card.label}</div>
+                <div style={{
+                  fontSize: '0.7rem', color: 'rgba(255,255,255,0.35)',
+                  fontFamily: 'Barlow, sans-serif', fontWeight: 300,
+                  letterSpacing: '0.04em', textTransform: 'uppercase',
+                }}>{card.sublabel}</div>
               </div>
             ))}
           </motion.div>
