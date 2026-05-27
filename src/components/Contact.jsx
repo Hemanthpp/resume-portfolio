@@ -51,6 +51,8 @@ export default function Contact() {
         transition={{ duration: 0.6, ease: 'easeOut', delay: 0.65 }}
         style={{ display: 'flex', alignItems: 'center', gap: '0.875rem',
                  flexWrap: 'wrap', justifyContent: 'center' }}>
+
+        {/* Primary CTA - Email */}
         <a href="mailto:hemanthpp1234@gmail.com" className="liquid-glass-strong"
            style={{ borderRadius: '9999px', display: 'flex', alignItems: 'center',
                     gap: '0.5rem', padding: '0.75rem 1.75rem',
@@ -58,13 +60,51 @@ export default function Contact() {
                     fontFamily: 'Barlow, sans-serif' }}>
           Send Email <ArrowUpRight className="h-5 w-5" />
         </a>
+
+        {/* Resume PDF Download */}
+        <a href="/resume.pdf" download="Hemanth_PP_Resume.pdf" className="liquid-glass"
+           style={{ borderRadius: '9999px', display: 'flex', alignItems: 'center',
+                    gap: '0.5rem', padding: '0.75rem 1.75rem',
+                    fontSize: '0.875rem', fontFamily: 'Barlow, sans-serif',
+                    fontWeight: 500 }}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          Download Resume
+        </a>
+
+        {/* LinkedIn */}
         <a href="https://www.linkedin.com/in/hemanthpp277930304" target="_blank" rel="noreferrer"
            className="liquid-glass"
            style={{ borderRadius: '9999px', display: 'flex', alignItems: 'center',
-                    gap: '0.5rem', padding: '0.75rem 1.75rem',
+                    gap: '0.5rem', padding: '0.75rem 1.5rem',
                     fontSize: '0.875rem', fontFamily: 'Barlow, sans-serif' }}>
-          LinkedIn <ArrowUpRight className="h-5 w-5" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+               fill="currentColor">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+            <rect x="2" y="9" width="4" height="12"/>
+            <circle cx="4" cy="4" r="2"/>
+          </svg>
+          LinkedIn
         </a>
+
+        {/* GitHub */}
+        <a href="https://github.com/Hemanthpp" target="_blank" rel="noreferrer"
+           className="liquid-glass"
+           style={{ borderRadius: '9999px', display: 'flex', alignItems: 'center',
+                    gap: '0.5rem', padding: '0.75rem 1.5rem',
+                    fontSize: '0.875rem', fontFamily: 'Barlow, sans-serif' }}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+               fill="currentColor">
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+          GitHub
+        </a>
+
+        {/* Phone */}
         <a href="tel:+918078006591" className="liquid-glass"
            style={{ borderRadius: '9999px', display: 'flex', alignItems: 'center',
                     gap: '0.5rem', padding: '0.75rem 1.5rem',
