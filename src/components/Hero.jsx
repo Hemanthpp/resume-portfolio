@@ -70,7 +70,7 @@ export default function Hero() {
 
           {/* Headline */}
           <BlurText
-            text="UPDATED PORTFOLIO TEST "
+            text="Building Intelligent Systems & Modern Web Experiences"
             className="font-heading italic text-white text-6xl md:text-7xl lg:text-[5.5rem] max-w-3xl text-center leading-[0.88] tracking-[-4px]"
           />
 
