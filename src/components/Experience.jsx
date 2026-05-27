@@ -6,7 +6,7 @@ const exps = [
   {
     role:    'AI/ML Development Team Intern',
     company: 'Techgentsia Software Technologies Pvt. Ltd',
-    period:  'Jun 9 – Jun 27, 2025 · Cherthala Infopark',
+    period:  'Jun 9 – Jun 27, 2025 · Cherthala Infopark, Kerala',
     bullets: [
       'Delivered a YOLO-based computer vision detection pipeline using Python and OpenCV with zero missed deadlines.',
       'Contributed to real-world ML model development tasks, applying Python-based workflows across team sprints.',
@@ -26,7 +26,7 @@ const exps = [
   {
     role:    'Web Development Intern',
     company: 'Keltron Technologies',
-    period:  'May – Jul 2023 · Remote',
+    period:  'May – Jul 2023 · Kannur, Kerala',
     bullets: [
       'Resolved front-end bugs across live pages using HTML, CSS and JavaScript, improving UI consistency.',
       'Fixed cross-browser compatibility issues for responsive, pixel-accurate rendering across all viewports.',
