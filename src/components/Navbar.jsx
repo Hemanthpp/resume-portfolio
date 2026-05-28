@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowUpRight } from './Icons';
 
 const links = [
@@ -10,19 +10,37 @@ const links = [
 ];
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav style={{ position: 'fixed', top: '1rem', left: 0, right: 0, zIndex: 50,
-                  display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+    <nav style={{ position: 'fixed', top: '1.5rem', left: 0, right: 0, zIndex: 50,
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
                   padding: '0 2rem' }}>
-      {/* Logo — profile photo */}
+      {/* Logo — profile photo (floating left) */}
       <a href="#home"
-         style={{ width: 95, height: 95, borderRadius: '9999px', display: 'block',
-                  overflow: 'hidden', border: '1px solid rgba(255,255,255,0.2)',
-                  flexShrink: 0, boxShadow: '0 0 0 2px rgba(255,255,255,0.06)' }}>
-        <img src="/avatar.jpg?v=5" alt="Hemanth P P"
-             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center',
-                      display: 'block', transform: 'translateZ(0)',
-                      WebkitBackfaceVisibility: 'hidden' }} />
+         style={{ position: 'absolute', left: '2rem', top: '-0.5rem',
+                  width: 96, height: 96, borderRadius: '9999px', display: 'block',
+                  overflow: 'hidden', border: '3px solid rgba(255,255,255,0.25)',
+                  boxShadow: '0 4px 20px rgba(0,0,0,0.5)',
+                  opacity: scrolled ? 0 : 1,
+                  pointerEvents: scrolled ? 'none' : 'auto',
+                  transition: 'opacity 0.4s ease, transform 0.4s ease',
+                  transform: scrolled ? 'scale(0.9)' : 'scale(1)' }}>
+        <img src="/avatar.jpg?v=10" alt="Hemanth P P"
+             style={{
+               width: '100%', height: '100%',
+               objectFit: 'cover', objectPosition: 'center center',
+               display: 'block',
+               imageRendering: '-webkit-optimize-contrast'
+             }} />
       </a>
 
       {/* Desktop links */}
