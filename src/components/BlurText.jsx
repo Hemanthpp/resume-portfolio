@@ -6,6 +6,14 @@ export default function BlurText({ text, className }) {
   const ref = useRef(null);
 
   useEffect(() => {
+    // If element is already in viewport on mount (e.g. Hero), trigger immediately
+    if (ref.current) {
+      const rect = ref.current.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        setInView(true);
+        return;
+      }
+    }
     const obs = new IntersectionObserver(
       ([e]) => { if (e.isIntersecting) setInView(true); },
       { threshold: 0.1 }

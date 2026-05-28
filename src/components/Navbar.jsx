@@ -14,13 +14,16 @@ export default function Navbar() {
     <nav style={{ position: 'fixed', top: '1rem', left: 0, right: 0, zIndex: 50,
                   display: 'flex', alignItems: 'center', justifyContent: 'space-between',
                   padding: '0 2rem' }}>
-      {/* Logo */}
-      <div className="liquid-glass"
-           style={{ width: 48, height: 48, borderRadius: '9999px',
-                    display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic',
-                       color: 'white', fontSize: '1.375rem' }}>h</span>
-      </div>
+      {/* Logo — profile photo */}
+      <a href="#home"
+         style={{ width: 95, height: 95, borderRadius: '9999px', display: 'block',
+                  overflow: 'hidden', border: '1px solid rgba(255,255,255,0.2)',
+                  flexShrink: 0, boxShadow: '0 0 0 2px rgba(255,255,255,0.06)' }}>
+        <img src="/avatar.jpg?v=5" alt="Hemanth P P"
+             style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center',
+                      display: 'block', transform: 'translateZ(0)',
+                      WebkitBackfaceVisibility: 'hidden' }} />
+      </a>
 
       {/* Desktop links */}
       <div className="liquid-glass hidden md:flex items-center gap-0.5"
