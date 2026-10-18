@@ -121,7 +121,9 @@ export default function Contact() {
         style={{ marginTop: '7rem', borderTop: '1px solid rgba(255,255,255,0.06)',
                  paddingTop: '2rem', width: '100%', maxWidth: '68rem',
                  display: 'flex', justifyContent: 'space-between',
-                 alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
+                 alignItems: 'center', flexWrap: 'wrap', gap: '1rem',
+                 flexDirection: 'row' }}
+        className="contact-footer">
         <span style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic',
                        color: 'rgba(255,255,255,0.4)', fontSize: '1.375rem' }}>
           Hemanth P P

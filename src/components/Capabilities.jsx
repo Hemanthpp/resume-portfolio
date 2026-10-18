@@ -71,7 +71,7 @@ export default function Capabilities() {
         </div>
 
         {/* Cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
                       gap: '1.5rem', marginTop: '4rem' }}>
           {cards.map((card, i) => (
             <motion.div key={card.title}

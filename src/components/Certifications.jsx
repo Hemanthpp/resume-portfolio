@@ -42,7 +42,7 @@ export default function Certifications() {
       </motion.h2>
 
       <div style={{ display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))',
                     gap: '1.25rem' }}>
         {certs.map((cert, i) => (
           <motion.div key={cert.name}

@@ -65,8 +65,8 @@ export default function Projects() {
         className="font-heading italic text-white text-6xl md:text-7xl lg:text-[6rem] leading-[0.9] tracking-[-3px]"
       />
 
-      <div style={{ marginTop: '4rem', display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+      <div className="projects-grid" style={{ marginTop: '4rem', display: 'grid',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                     gap: '1.75rem' }}>
         {projects.map((proj, i) => (
           <motion.div key={proj.name}

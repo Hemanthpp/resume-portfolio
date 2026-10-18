@@ -49,20 +49,22 @@ export default function Hero() {
         }}>
 
           {/* Badge */}
-          <motion.div {...fu(0.4)} className="liquid-glass"
+          <motion.div {...fu(0.4)} className="liquid-glass hero-badge"
             style={{
               borderRadius: '9999px', display: 'flex', alignItems: 'center',
-              gap: '0.5rem', padding: '0.375rem', marginBottom: '1.5rem'
+              gap: '0.5rem', padding: '0.375rem', marginBottom: '1.5rem',
+              flexWrap: 'wrap', justifyContent: 'center',
             }}>
             <span style={{
               background: 'white', color: '#000',
               padding: '0.25rem 0.75rem', borderRadius: '9999px',
               fontSize: '0.75rem', fontWeight: 700,
-              fontFamily: 'Barlow, sans-serif'
+              fontFamily: 'Barlow, sans-serif', flexShrink: 0,
             }}>Open to Work</span>
-            <span style={{
+            <span className="hero-badge-text" style={{
               fontSize: '0.875rem', color: 'rgba(255,255,255,0.9)',
-              paddingRight: '0.75rem', fontFamily: 'Barlow, sans-serif'
+              paddingRight: '0.75rem', fontFamily: 'Barlow, sans-serif',
+              textAlign: 'center',
             }}>
               AI/ML Developer &amp; Full-Stack Engineer — Kannur, Kerala
             </span>
@@ -88,7 +90,9 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div {...fu(1.1)}
-            style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '1.5rem' }}>
+            className="hero-ctas"
+            style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '1.5rem',
+                     flexWrap: 'wrap', justifyContent: 'center' }}>
             <a href="#projects"
               style={{
                 borderRadius: '9999px', display: 'flex', alignItems: 'center',

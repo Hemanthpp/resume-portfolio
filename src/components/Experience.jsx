@@ -87,7 +87,7 @@ export default function Experience() {
               <span className="liquid-glass"
                     style={{ borderRadius: '9999px', padding: '0.25rem 0.875rem',
                              fontSize: '0.75rem', color: 'rgba(255,255,255,0.75)',
-                             fontFamily: 'Barlow, sans-serif', whiteSpace: 'nowrap' }}>
+                             fontFamily: 'Barlow, sans-serif', flexShrink: 0 }}>
                 {exp.period}
               </span>
             </div>
